@@ -1,8 +1,23 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import { AiFillLinkedin, AiFillGithub, AiTwotoneFile } from "react-icons/ai";
 
+import "animate.css";
+import Project from "../components/project";
+import MyModal from "../components/projectModal";
+
+import {FaIcons, FaLongArrowAltDown} from 'react-icons/fa'
+
+import { useState } from "react";
 export default function Home() {
+
+  let [isOpen, setIsOpen] = useState(false)
+
+  const [index, setIndex] = useState(0)
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,58 +27,119 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <header className={styles.header}>
+          <div className={"flex flex-row"}>
+            <h4 className={styles.name}>evan moore</h4>
+{/* 
+            <h4 className={"text-lg p-10"}>•</h4>
+            <h4 className={"text-lg p-10"}>
+              <Link href="/">about</Link>
+            </h4>
+            <h4 className={"text-lg p-10"}>
+              <Link href="/">portfolio</Link>
+            </h4> */}
+          </div>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+          <div className={"flex flex-row p-10"}>
+            <div className = {styles.iconContainer} title = "LinkedIn">
+            <AiFillLinkedin size={50} color="white"/>
+            </div>
+            <div className = {styles.iconContainer}>
+            <AiFillGithub size={50} color="white" />
+            </div>
+            <div className = {styles.iconContainer}>
+            <AiTwotoneFile size={50} color="white" />
+            </div>
+          </div>
+        </header>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <div className={styles.body}>
+          <div className={styles.bodyText}>
+            <h1 className="animate__animated animate__backInLeft ">
+              Hi, I'm <b>NAME HERE</b>.
+            </h1>
+            <h1 className={styles.bodyTextHeader}>
+              I'm a junior at <b>Brown University</b> pursuing a Bachelor of Arts in
+              <b> Computer Science 💻.</b>
+            </h1>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+            <h1>
+              I'm especially interested in <b>software engineering</b> and all things <b>data</b> !
+            
+              In my free time, I enjoy playing basketball, reading, and learning
+              about new technologies.
+            </h1>
+          </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <div className = {styles.imageContainer}>
+            <Image
+              layout = "fill"
+              objectFit='contain'
+              borderRadius={100}
+              src="/imgs/bruh.png"
+            />
+          </div>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          
+
+
         </div>
+
+        <p className="animate__animated animate__bounce animate__infinite text-4xl py-10">&darr;</p>
+
+
+        <section>
+
+
+          <Project
+            tags={["React Native", "Firebase", "Rest API"]}
+            title="Insider Trends"
+            description=" Insider Trends is a stock “library” iOS app coded in React Native that allows users to create multiple accounts, explore the most viewed stocks on the app, search for stocks, view information about a stock, and add or remove stocks from their library."
+            setIsOpen = {setIsOpen}
+            index = {0}
+            setIndex = {setIndex}
+            image = {"/imgs/insidertrendscover.png"}
+          />
+
+          <Project
+            tags={["React", "Material UI", "Rest API"]}
+            title="Top Tech Stocks"
+            description="Web application that displays detailed information about the biggest tech companies and allows the user to sort them by employees and market cap, and add the stock to their library where they can see the cumulative market cap and daily percent change."
+            setIsOpen = {setIsOpen}
+            index = {1}
+            setIndex = {setIndex}
+            image = {"/imgs/final.png"}
+          />
+
+          <Project
+            tags={["Figma", "UI", "UX"]}
+            title="Pills2Me Redesign"
+            description="Alongside a small team, I helped redesign a startup's user interface for iOS and mock up the user experience. The startup we worked with Pills2Me, a delivery application for pharmaceuticals. We created a hi-fidelity mobile prototype and shared it with the start-up team."
+            setIsOpen = {setIsOpen}
+            index = {2}
+            setIndex = {setIndex}
+            image = {"/imgs/pills2me/slide1.png"}
+          />
+
+        <Project
+            tags={["A/B Testing", "UI", "UX"]}
+            title="Eye Tracking"
+            description="With a team, I helped prototype a website, compute A/B testing on the website, and generate a heatmap utilizing test subjects and where they were looking when using the website prototype."
+            setIsOpen = {setIsOpen}
+            index = {3}
+            setIndex = {setIndex}
+            image = {"/imgs/comp_ab.png"}
+          />
+        </section>
+
+        <MyModal
+        isOpen = {isOpen}
+        setIsOpen = {setIsOpen}
+        index = {index}
+        />
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
-  )
+  );
 }

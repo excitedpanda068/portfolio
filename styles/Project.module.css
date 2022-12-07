@@ -1,0 +1,68 @@
+
+
+
+.container {
+    height: 100vh;
+    width: 90vw;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    border-top: 10px groove rgb(67,90,121) ;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 2.5vw;
+}
+
+
+.description {
+    font-weight: 200;
+    text-align: center;
+    font-size: 1.5vw;
+
+}
+
+.slideContainer {
+    background-color: red;
+
+}
+
+
+.projectButton:hover {
+    border-bottom: 1px solid black;
+}
+
+.projectButton {
+    border-bottom: 1px solid transparent;
+}
+
+
+.tags {
+    font-weight: 900;
+    font-size: 1.8vw;
+}
+
+.detailsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+    padding: 2vw;
+    height: 60%;
+
+}
+
+.detailsContainer:hover {
+    background-color: rgba(67,90,121, 0.4)    ;
+    border-radius: 20px;
+    padding: 2vw;
+}
+
+.galleryContainer {
+    width: 50%;
+    position: relative;
+    height: 60%;
+}

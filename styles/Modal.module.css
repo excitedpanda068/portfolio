@@ -1,0 +1,79 @@
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+
+.title {
+    font-size: 2vw;
+    font-weight: 900;
+}
+
+.galleryContainer {
+    width: 30vw;
+}
+
+.linkText {
+    color: white;
+    font-weight: 900;
+}
+
+.linkContainer {
+    background-color: black;
+    display: flex;
+    padding: 1vw;
+    border-radius: 1vw;
+    cursor: pointer;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1vw;
+    align-items: center;
+}
+
+.sectionText {
+    max-width: 35%;
+    font-size: 1.2vw;
+}
+
+.galleryContainer {
+    width: 55%;
+    display: flex;
+    border-radius: 1vw;
+    background-color: black;
+}
+
+.sectionContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vw;
+    padding-top: 2vw;
+    justify-content: space-between;
+    border-top: 10px groove rgb(67,90,121) ;
+
+}
+
+.subtitle {
+    font-size: 1vw;
+    color: gray;
+}
+
+.closeButton {
+    display: flex;
+    align-self: flex-end;
+    background-color: rgb(67,90,121);
+    padding: 0.4vw;
+    border-radius: 50%;
+}
+
+.closeButton:hover {
+    background-color: red;
+}
+
