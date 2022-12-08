@@ -56,15 +56,15 @@ export default function Home() {
         <div className={styles.body}>
           <div className={styles.bodyText}>
             <h1 className="animate__animated animate__backInLeft ">
-              Hi, I'm <b>NAME HERE</b>.
+              {"Hi, I'm"} <b>NAME HERE</b>.
             </h1>
             <h1 className={styles.bodyTextHeader}>
-              I'm a junior at <b>Brown University</b> pursuing a Bachelor of Arts in
+              {"I'm a junior at "}<b>Brown University</b> pursuing a Bachelor of Arts in
               <b> Computer Science 💻.</b>
             </h1>
 
             <h1>
-              I'm especially interested in <b>software engineering</b> and all things <b>data</b> !
+             {" I'm especially interested in "}<b>software engineering</b> and all things <b>data</b> !
             
               In my free time, I enjoy playing basketball, reading, and learning
               about new technologies.
