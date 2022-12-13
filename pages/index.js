@@ -1,22 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
 import { AiFillLinkedin, AiFillGithub, AiTwotoneFile } from "react-icons/ai";
 
 import "animate.css";
 import Project from "../components/project";
 import MyModal from "../components/projectModal";
 
-import {FaIcons, FaLongArrowAltDown} from 'react-icons/fa'
-
 import { useState } from "react";
 export default function Home() {
-
-  let [isOpen, setIsOpen] = useState(false)
-
-  const [index, setIndex] = useState(0)
-
+  let [isOpen, setIsOpen] = useState(false);
+  const [index, setIndex] = useState(0);
 
   return (
     <div className={styles.container}>
@@ -30,119 +24,109 @@ export default function Home() {
         <header className={styles.header}>
           <div className={"flex flex-row"}>
             <h4 className={styles.name}>name here</h4>
-
           </div>
 
           <div className={"flex flex-row p-10"}>
-            <div className = {"animate__animated animate__backInLeft mr-4 flex"} title = "LinkedIn">
-            <AiFillLinkedin size={50} color="white"/>
+            <div
+              className={"animate__animated animate__backInLeft mr-4 flex"}
+              title="LinkedIn"
+            >
+              <AiFillLinkedin size={50} color="white" />
             </div>
-            <div className = {"animate__animated animate__backInLeft mr-4 flex"}>
-            <AiFillGithub size={50} color="white" />
+            <div className={"animate__animated animate__backInLeft mr-4 flex"}>
+              <AiFillGithub size={50} color="white" />
             </div>
-            <div className = {"animate__animated animate__backInLeft mr-4 flex"}>
-            <AiTwotoneFile size={50} color="white" />
+            <div className={"animate__animated animate__backInLeft mr-4 flex"}>
+              <AiTwotoneFile size={50} color="white" />
             </div>
           </div>
         </header>
 
         <div className={styles.body}>
-          
           <div className={styles.bodyText}>
             <h1 className="animate__animated animate__backInLeft ">
               {"Hi, I'm"} <b>NAME HERE</b>.
             </h1>
             <h1 className={"animate__animated animate__backInLeft "}>
-              {"I'm a ____ at "}<b>Brown University</b> pursuing a Bachelor of Arts in
+              {"I'm a ____ at "}
+              <b>Brown University</b> pursuing a Bachelor of Arts in
               <b> __________ 💻.</b>
             </h1>
 
-            <h1 className = {"animate__animated animate__backInLeft"}>
-             {" I'm especially interested in "}<b>_____ _______</b> and all things <b>____</b> !
-            
-              In my free time, I enjoy _____ 🌮, ______ 🎲, and learning
-              about _______ . 🌋
+            <h1 className={"animate__animated animate__backInLeft"}>
+              {" I'm especially interested in "}
+              <b>_____ _______</b> and all things <b>____</b> ! In my free time,
+              I enjoy _____ 🌮, ______ 🎲, and learning about _______ . 🌋
             </h1>
           </div>
 
-          <div className = {styles.imageContainer}>
+          <div className={styles.imageContainer}>
             <Image
-              layout = "fill"
-              objectFit='contain'
+              layout="fill"
+              objectFit="contain"
               borderRadius={100}
               src="/imgs/bruh.png"
               className="animate__animated animate__backInLeft "
             />
           </div>
-
-          
-
-
         </div>
 
-        <p className="animate__animated animate__bounce text-4xl py-10 ">&darr;</p>
-
+        <p className="animate__animated animate__bounce text-4xl py-10 ">
+          &darr;
+        </p>
 
         <section>
-
-
           <Project
             tags={["React Native", "Firebase", "Rest API"]}
             title="Insider Trends"
             description=" Insider Trends is a stock “library” iOS app coded in React Native that allows users to create multiple accounts, explore the most viewed stocks on the app, search for stocks, view information about a stock, and add or remove stocks from their library."
-            setIsOpen = {setIsOpen}
-            index = {0}
-            setIndex = {setIndex}
-            image = {"/imgs/insidertrendscover.png"}
-            switch = {false}
+            setIsOpen={setIsOpen}
+            index={0}
+            setIndex={setIndex}
+            image={"/imgs/insidertrendscover.png"}
+            switch={false}
           />
 
           <Project
             tags={["React", "Material UI", "Rest API"]}
             title="Top Tech Stocks"
             description="Web application that displays detailed information about the biggest tech companies and allows the user to sort them by employees and market cap, and add the stock to their library where they can see the cumulative market cap and daily percent change."
-            setIsOpen = {setIsOpen}
-            index = {1}
-            setIndex = {setIndex}
-            image = {"/imgs/final.png"}
-            switch = {true}
+            setIsOpen={setIsOpen}
+            index={1}
+            setIndex={setIndex}
+            image={"/imgs/final.png"}
+            switch={true}
           />
 
           <Project
             tags={["Figma", "UI", "UX"]}
             title="Pills2Me Redesign"
             description="Alongside a small team, I helped redesign a startup's user interface for iOS and mock up the user experience. The startup we worked with Pills2Me, a delivery application for pharmaceuticals. We created a hi-fidelity mobile prototype and shared it with the start-up team."
-            setIsOpen = {setIsOpen}
-            index = {2}
-            setIndex = {setIndex}
-            image = {"/imgs/pills2me/slide1.png"}
-            switch = {false}
+            setIsOpen={setIsOpen}
+            index={2}
+            setIndex={setIndex}
+            image={"/imgs/pills2me/slide1.png"}
+            switch={false}
           />
 
-        <Project
+          <Project
             tags={["Figma", "React", "UI"]}
             title="Poke Rework"
             description="I redesigned the poke restaurant - Poke Works - ordering page as part of a school project. The redesigned page includes better graphics, a straightforward ordering system that allows the user to see what they are ordering and view nutritional information about the dish, and a clear contact section."
-            setIsOpen = {setIsOpen}
-            index = {3}
-            setIndex = {setIndex}
-            image = {"/imgs/pokemacbook.png"}
-            switch = {true}
+            setIsOpen={setIsOpen}
+            index={3}
+            setIndex={setIndex}
+            image={"/imgs/pokemacbook.png"}
+            switch={true}
           />
         </section>
 
-        <MyModal
-        isOpen = {isOpen}
-        setIsOpen = {setIsOpen}
-        index = {index}
-        />
+        <MyModal isOpen={isOpen} setIsOpen={setIsOpen} index={index} />
       </main>
 
       <footer className={styles.footer}>
+        <p className={styles.footerText}>Contact: ____@gmail.com</p>
         <p className={styles.footerText}>
-          Contact: ____@gmail.com
-        </p>
-        <p className = {styles.footerText}>
           Thank you for checking out my portfolio website!
         </p>
       </footer>

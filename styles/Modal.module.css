@@ -1,86 +1,79 @@
-
-
-
 .container {
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
 }
 
 .title {
-    font-size: 2vw;
-    font-weight: 900;
+  font-size: 2vw;
+  font-weight: 900;
 }
 
-
-
 .linkText {
-    color: white;
-    font-weight: 900;
+  color: white;
+  font-weight: 900;
 }
 
 .linkContainer {
-    background-color: black;
-    display: flex;
-    padding: 1vw;
-    border-radius: 1vw;
-    cursor: pointer;
-    margin-left: 1vw;
-    margin-right: 1vw;
+  background-color: black;
+  display: flex;
+  padding: 1vw;
+  border-radius: 1vw;
+  cursor: pointer;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 1vw;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1vw;
+  align-items: center;
 }
 
 .sectionText {
-    font-size: 1.2vw;
-    border-bottom: 4px groove rgb(67,90,121) ;
-    margin-bottom: 1vw;
-    padding-bottom: 1vw;
+  font-size: 1.2vw;
+  border-bottom: 4px groove rgb(67, 90, 121);
+  margin-bottom: 1vw;
+  padding-bottom: 1vw;
 }
 
 .galleryContainer {
-    border-radius: 1vw;
-    padding: 2vw;
-    height: 60%;
-    display: flex;
-    background-color: black;
+  border-radius: 1vw;
+  padding: 2vw;
+  height: 60%;
+  display: flex;
+  background-color: black;
 }
 
 .sectionContainer {
-    display: flex;
-    flex-direction: row;
-    margin-top: 2vw;
-    padding-top: 2vw;
-    justify-content: space-between;
-    border-top: 10px groove rgb(67,90,121) ;
-
+  display: flex;
+  flex-direction: row;
+  margin-top: 2vw;
+  padding-top: 2vw;
+  justify-content: space-between;
+  border-top: 10px groove rgb(67, 90, 121);
 }
 
 .subtitle {
-    font-size: 1vw;
-    color: gray;
+  font-size: 1vw;
+  color: gray;
 }
 
 .closeButton {
-    display: flex;
-    align-self: flex-end;
-    background-color: rgb(67,90,121);
-    padding: 0.4vw;
-    border-radius: 50%;
+  display: flex;
+  align-self: flex-end;
+  background-color: rgb(67, 90, 121);
+  padding: 0.4vw;
+  border-radius: 50%;
 }
 
 .closeButton:hover {
-    background-color: red;
+  background-color: red;
 }
 
 .textContainer {
-    display: flex;
-    flex-direction: column;
-    margin-right: 2vw;
+  display: flex;
+  flex-direction: column;
+  margin-right: 2vw;
 }
-
