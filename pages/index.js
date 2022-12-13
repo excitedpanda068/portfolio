@@ -105,7 +105,7 @@ export default function Home() {
             setIsOpen={setIsOpen}
             index={2}
             setIndex={setIndex}
-            image={"/imgs/pills2me/slide1.png"}
+            image={"/imgs/pills2Me/slide1.png"}
             switch={false}
           />
 
