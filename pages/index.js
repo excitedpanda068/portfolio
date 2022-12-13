@@ -26,48 +26,42 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main className={[styles.main]}>
         <header className={styles.header}>
           <div className={"flex flex-row"}>
-            <h4 className={styles.name}>evan moore</h4>
-{/* 
-            <h4 className={"text-lg p-10"}>•</h4>
-            <h4 className={"text-lg p-10"}>
-              <Link href="/">about</Link>
-            </h4>
-            <h4 className={"text-lg p-10"}>
-              <Link href="/">portfolio</Link>
-            </h4> */}
+            <h4 className={styles.name}>name here</h4>
+
           </div>
 
           <div className={"flex flex-row p-10"}>
-            <div className = {styles.iconContainer} title = "LinkedIn">
+            <div className = {"animate__animated animate__backInLeft mr-4 flex"} title = "LinkedIn">
             <AiFillLinkedin size={50} color="white"/>
             </div>
-            <div className = {styles.iconContainer}>
+            <div className = {"animate__animated animate__backInLeft mr-4 flex"}>
             <AiFillGithub size={50} color="white" />
             </div>
-            <div className = {styles.iconContainer}>
+            <div className = {"animate__animated animate__backInLeft mr-4 flex"}>
             <AiTwotoneFile size={50} color="white" />
             </div>
           </div>
         </header>
 
         <div className={styles.body}>
+          
           <div className={styles.bodyText}>
             <h1 className="animate__animated animate__backInLeft ">
               {"Hi, I'm"} <b>NAME HERE</b>.
             </h1>
-            <h1 className={styles.bodyTextHeader}>
-              {"I'm a junior at "}<b>Brown University</b> pursuing a Bachelor of Arts in
-              <b> Computer Science 💻.</b>
+            <h1 className={"animate__animated animate__backInLeft "}>
+              {"I'm a ____ at "}<b>Brown University</b> pursuing a Bachelor of Arts in
+              <b> __________ 💻.</b>
             </h1>
 
-            <h1>
-             {" I'm especially interested in "}<b>software engineering</b> and all things <b>data</b> !
+            <h1 className = {"animate__animated animate__backInLeft"}>
+             {" I'm especially interested in "}<b>_____ _______</b> and all things <b>____</b> !
             
-              In my free time, I enjoy playing basketball, reading, and learning
-              about new technologies.
+              In my free time, I enjoy _____ 🌮, ______ 🎲, and learning
+              about _______ . 🌋
             </h1>
           </div>
 
@@ -77,6 +71,7 @@ export default function Home() {
               objectFit='contain'
               borderRadius={100}
               src="/imgs/bruh.png"
+              className="animate__animated animate__backInLeft "
             />
           </div>
 
@@ -85,7 +80,7 @@ export default function Home() {
 
         </div>
 
-        <p className="animate__animated animate__bounce animate__infinite text-4xl py-10">&darr;</p>
+        <p className="animate__animated animate__bounce text-4xl py-10 ">&darr;</p>
 
 
         <section>
@@ -99,6 +94,7 @@ export default function Home() {
             index = {0}
             setIndex = {setIndex}
             image = {"/imgs/insidertrendscover.png"}
+            switch = {false}
           />
 
           <Project
@@ -109,6 +105,7 @@ export default function Home() {
             index = {1}
             setIndex = {setIndex}
             image = {"/imgs/final.png"}
+            switch = {true}
           />
 
           <Project
@@ -119,16 +116,18 @@ export default function Home() {
             index = {2}
             setIndex = {setIndex}
             image = {"/imgs/pills2me/slide1.png"}
+            switch = {false}
           />
 
         <Project
-            tags={["A/B Testing", "UI", "UX"]}
-            title="Eye Tracking"
-            description="With a team, I helped prototype a website, compute A/B testing on the website, and generate a heatmap utilizing test subjects and where they were looking when using the website prototype."
+            tags={["Figma", "React", "UI"]}
+            title="Poke Rework"
+            description="I redesigned the poke restaurant - Poke Works - ordering page as part of a school project. The redesigned page includes better graphics, a straightforward ordering system that allows the user to see what they are ordering and view nutritional information about the dish, and a clear contact section."
             setIsOpen = {setIsOpen}
             index = {3}
             setIndex = {setIndex}
-            image = {"/imgs/comp_ab.png"}
+            image = {"/imgs/pokemacbook.png"}
+            switch = {true}
           />
         </section>
 
@@ -139,7 +138,14 @@ export default function Home() {
         />
       </main>
 
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+        <p className={styles.footerText}>
+          Contact: ____@gmail.com
+        </p>
+        <p className = {styles.footerText}>
+          Thank you for checking out my portfolio website!
+        </p>
+      </footer>
     </div>
   );
 }

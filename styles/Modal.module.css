@@ -12,9 +12,7 @@
     font-weight: 900;
 }
 
-.galleryContainer {
-    width: 30vw;
-}
+
 
 .linkText {
     color: white;
@@ -39,14 +37,17 @@
 }
 
 .sectionText {
-    max-width: 35%;
     font-size: 1.2vw;
+    border-bottom: 4px groove rgb(67,90,121) ;
+    margin-bottom: 1vw;
+    padding-bottom: 1vw;
 }
 
 .galleryContainer {
-    width: 55%;
-    display: flex;
     border-radius: 1vw;
+    padding: 2vw;
+    height: 60%;
+    display: flex;
     background-color: black;
 }
 
@@ -75,5 +76,11 @@
 
 .closeButton:hover {
     background-color: red;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2vw;
 }
 
